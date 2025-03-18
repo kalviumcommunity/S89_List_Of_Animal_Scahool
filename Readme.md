@@ -32,6 +32,17 @@ The **List of Animal Schools (ASAP)** is a **MERN stack** web application design
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 ### **Other Tools:**
 - **Cloudinary** – Image upload.
 - **Google Maps API** – For interactive map integration
