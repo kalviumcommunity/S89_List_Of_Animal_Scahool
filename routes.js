@@ -9,7 +9,8 @@ router.get("/", async (req, res) => {
         const schools = await AnimalSchool.find();
         return res.status(200).json(schools);
     } catch (error) {
-        return res.status(500).send({ message: "Failed to fetch animal schools", error });
+        console.error("Error fetching animal schools:", error);
+        return res.status(500).send({ message: "Failed to fetch animal schools" });
     }
 });
 
@@ -26,7 +27,8 @@ router.post("/", async (req, res) => {
         await newSchool.save();
         return res.status(201).json({ message: "Animal school created successfully", school: newSchool });
     } catch (error) {
-        return res.status(500).send({ message: "Failed to create animal school", error });
+        console.error("Error creating animal school:", error);
+        return res.status(500).send({ message: "Failed to create animal school" });
     }
 });
 
@@ -43,7 +45,8 @@ router.put("/:id", async (req, res) => {
         }
         return res.status(200).json({ message: "Animal school updated successfully", school: updatedSchool });
     } catch (error) {
-        return res.status(500).send({ message: "Failed to update animal school", error });
+        console.error("Error updating animal school:", error);
+        return res.status(500).send({ message: "Failed to update animal school" });
     }
 });
 
@@ -60,7 +63,8 @@ router.delete("/:id", async (req, res) => {
         }
         return res.status(200).json({ message: "Animal school deleted successfully" });
     } catch (error) {
-        return res.status(500).send({ message: "Failed to delete animal school", error });
+        console.error("Error deleting animal school:", error);
+        return res.status(500).send({ message: "Failed to delete animal school" });
     }
 });
 
