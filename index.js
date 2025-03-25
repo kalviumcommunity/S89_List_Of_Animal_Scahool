@@ -14,7 +14,7 @@ app.get("/ping",(req,res)=>{
 
 app.listen(8080,async()=>{
     try {
-        await mongoose.connect(`mongodb+srv://abhishektiwari136136:${MONGO_PASSWORD}@cluster0.pxcmv.mongodb.net/`);
+        await mongoose.connect(process.env.MONGO_URI);
         console.log("Server connected sucessfully");
     } catch (error) {
         console.log(error)
