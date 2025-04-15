@@ -82,7 +82,7 @@ function App() {
       <div>
       {
         animalSchools.map((ele)=>(
-          <div>
+          <div key={ele.name}>
             <h2>{ele.name}</h2>
             <p>{ele.species}</p>
             <p>{ele.numberOfStudents}</p>
