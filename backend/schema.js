@@ -1,5 +1,11 @@
 const mongoose = require('mongoose');
 
+
+
+
+
+
+
 const AnimalSchoolSchema = new mongoose.Schema({
   name: {
     type: String,
