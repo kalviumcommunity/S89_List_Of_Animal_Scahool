@@ -1,16 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 require("dotenv").config();
 
 const MONGO_URI = process.env.MONGO_URI;
 if (!MONGO_URI) {
     console.error("MONGO_URI is not set. Please check your environment variables.");
-    process.exit(1);
 }
 
 const app = express();
 const routes = require("./routes");
-
+app.use(cors());
 app.use(express.json());
 
 app.get("/ping", (req, res) => {
@@ -28,5 +28,4 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     })
     .catch((error) => {
         console.error("Failed to connect to MongoDB:", error);
-        process.exit(1); 
     });
