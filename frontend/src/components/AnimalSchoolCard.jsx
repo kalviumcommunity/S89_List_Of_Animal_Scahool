@@ -1,7 +1,6 @@
 import React from 'react'
 
 const AnimalSchoolCard = ({animalSchool}) => {
-  console.log(animalSchool)
   return (
     <div
     style={{
@@ -30,8 +29,8 @@ const AnimalSchoolCard = ({animalSchool}) => {
         >
            <h3>List Of Animals in School</h3>
         {
-          animalSchool && animalSchool.animals ? animalSchool.animals.map((ele)=>(
-            <p>{ele}</p>
+          animalSchool && animalSchool.animals ? animalSchool.animals.map((ele,idx)=>(
+            <p key={`${animalSchool.animals}+${idx}+${Math.random()}`}>{ele}</p>
           )):""
         }
         </div>

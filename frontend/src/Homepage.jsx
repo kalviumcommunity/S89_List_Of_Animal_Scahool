@@ -86,7 +86,7 @@ const Homepage = () => {
       setSchool(data.data);
     } catch (error) {
       console.log(error)
-      alert("");
+      alert("Something went wrong");
     }
   }
 
@@ -100,7 +100,7 @@ useEffect(()=>{
       <h1>List Of Animals School</h1>
         {
             school.map((animalSchool)=>(
-                <AnimalSchoolCard  animalSchool={animalSchool}/>
+                <AnimalSchoolCard key={animalSchool._id}  animalSchool={animalSchool}/>
             ))    
         }
     </div>
