@@ -81,7 +81,7 @@ const Homepage = () => {
   const[school,setSchool] = useState([]);
   async function getSchoolData(){
     try {
-      const data = await axios.get("http://localhost:8080/animal-school");
+      const data = await axios.get(`${import.meta.env.VITE_BASE_URL}/animal-school`);
       console.log(data.data);
       setSchool(data.data);
     } catch (error) {
