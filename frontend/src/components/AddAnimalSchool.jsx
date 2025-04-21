@@ -9,17 +9,21 @@ const AddAnimalSchool = () => {
   const [message, setMessage] = useState('');
 
   const handleAddAnimal = () => {
-    if (animalInput.trim() !== '') {
-      setAnimals([...animals, animalInput.trim()]);
+    const trimmedAnimal = animalInput.trim().toLowerCase(); // normalize case (optional)
+    if (trimmedAnimal && !animals.includes(trimmedAnimal)) {
+      setAnimals([...animals, trimmedAnimal]);
       setAnimalInput('');
+    } else if (animals.includes(trimmedAnimal)) {
+      setMessage('Animal already added.');
     }
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8080/animal-school', {
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/animal-school`, {
         name,
         location,
         animals
