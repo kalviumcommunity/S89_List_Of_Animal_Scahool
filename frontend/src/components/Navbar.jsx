@@ -16,6 +16,9 @@ const Navbar = () => {
         <button
         onClick={()=>navigate("/about")}
         >About</button>
+        <button
+        onClick={()=>navigate("/addSchool")}
+        >Add New Animal School</button>
     </div>
   )
 }
