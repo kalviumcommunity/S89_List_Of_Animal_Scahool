@@ -20,7 +20,7 @@ const AnimalSchoolCard = ({ animalSchool, getSchoolData }) => {
     }
 
     try {
-      await axios.put(`http://localhost:8080/animal-school/${animalSchool._id}`, {
+      await axios.put(`${import.meta.env.BASE_URL}/animal-school/${animalSchool._id}`, {
         name: name.trim(),
         location: location.trim(),
         animals: animals.map(a => a.trim())
@@ -39,7 +39,7 @@ const AnimalSchoolCard = ({ animalSchool, getSchoolData }) => {
     if (!window.confirm("Are you sure you want to delete this school?")) return;
 
     try {
-      await axios.delete(`http://localhost:8080/animal-school/${animalSchool._id}`);
+      await axios.delete(`${import.meta.env.BASE_URL}/animal-school/${animalSchool._id}`);
       alert("Deleted successfully");
       getSchoolData();
     } catch (error) {
