@@ -100,7 +100,7 @@ useEffect(()=>{
       <h1>List Of Animals School</h1>
         {
             school.map((animalSchool)=>(
-                <AnimalSchoolCard key={animalSchool._id}  animalSchool={animalSchool}/>
+                <AnimalSchoolCard key={animalSchool._id}  animalSchool={animalSchool} getSchoolData={getSchoolData} />
             ))    
         }
     </div>
