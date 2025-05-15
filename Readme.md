@@ -5,9 +5,7 @@
 https://s89-list-of-animal-scahool.pages.dev/
 
 ## 📌 Project Overview
-The **List of Animal Schools (ASAP)** is a **MERN stack** web application designed to provide a comprehensive directory of animal-related educational institutions, training centers, and wildlife rehabilitation programs. Users can search, filter, and review different animal schools based on location, specialization, and ratings.
-
----
+The **List of Animal Schools (ASAP)** is a **MERN stack** web application designed to provide a comprehensive directory of animal-related educational institutions, training centers, and wildlife rehabilitation programs. Users can search, f
 
 ## 🚀 Key Features
 - 🔍 **Search & Filter**: Find animal schools by location, category, and specialization.
